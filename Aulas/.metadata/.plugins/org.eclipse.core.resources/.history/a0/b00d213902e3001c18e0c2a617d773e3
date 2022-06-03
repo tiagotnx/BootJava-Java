@@ -1,0 +1,22 @@
+package condicional;
+
+import java.util.Scanner;
+
+public class Imc {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		double peso, altura;
+		String classificacao;
+
+		System.out.println("Informe o peso: ");
+		peso = sc.nextDouble();
+		System.out.println("Informe a altura: ");
+		altura = sc.nextDouble();
+
+		sc.close();
+
+	}
+
+}

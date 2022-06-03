@@ -1,0 +1,13 @@
+package condicional;
+
+public class OperadorLogico {
+
+	public static void main(String[] args) {
+		int x = 5;
+		
+		//System.out.println(x <= 15 && x == 10);
+		System.out.println(x >= 0 && x != 6);
+
+	}
+
+}
