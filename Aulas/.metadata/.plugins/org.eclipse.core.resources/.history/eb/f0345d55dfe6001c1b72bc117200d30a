@@ -1,0 +1,31 @@
+package repeticao;
+
+import java.util.Scanner;
+
+public class Exercicio3 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		double base, altura = 0;
+
+		System.out.println("Insira a base do triângulo: ");
+		base = sc.nextDouble();
+
+		if (base <= 0) {
+			System.out.println("O valor inserido é inválido, insira um valor maior que 0.");
+		} else {
+			System.out.println("Insira a altura do triângulo: ");
+			altura = sc.nextDouble();
+			if (altura <= 0) {
+				System.out.println("O valor inserido é inválido, insira um valor maior que 0.");
+			} else {
+				System.out.printf("A área do tringulo é de %.3f.", (base * altura) / 2);
+			}
+		}
+
+		sc.close();
+	}
+
+}

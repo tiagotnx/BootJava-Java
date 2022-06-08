@@ -1,0 +1,13 @@
+package repeticao;
+
+public class opCompostos {
+
+	public static void main(String[] args) {
+		int x = 3, y = 5;
+		System.out.println(x += 7);
+		
+		
+
+	}
+
+}
