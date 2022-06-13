@@ -1,0 +1,59 @@
+package desafio;
+
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		double preco, precoImposto, precoLucro, totalC = 0, totalE = 0, totalV = 0;
+		int quantidade, produto = 1;
+		char categoria;
+
+		while (produto <= 15) {
+
+			System.out.printf("\nInsira a categoria do produto %d (C, E ou V): ", produto);
+			categoria = sc.next().charAt(0);
+			categoria = Character.toUpperCase(categoria);
+
+			if (categoria == 'C') {
+				System.out.println("Insira o preço unitário do produto: ");
+				preco = sc.nextDouble();
+				precoImposto = preco * 1.3741;
+				precoLucro = precoImposto * 1.3;
+				System.out.printf("O valor do produto %d com 37,41 porcento de imposto será de %.2f\n", produto, precoImposto);
+				System.out.printf("O valor do produto %d já com impostp e com 30 porcento de lucro será de %.2f\n", produto, precoLucro);
+				System.out.println("Insita a quantidade do produto: ");
+				quantidade = sc.nextInt();
+				produto++;
+				totalC += (preco * quantidade);
+			} else if (categoria == 'E') {
+				System.out.println("Insira o preço unitário do produto: ");
+				preco = sc.nextDouble();
+				System.out.println("Insita a quantidade do produto: ");
+				quantidade = sc.nextInt();
+				produto++;
+				totalE += (preco * quantidade);
+			} else if (categoria == 'V') {
+				System.out.println("Insira o preço unitário do produto: ");
+				preco = sc.nextDouble();
+				System.out.println("Insita a quantidade do produto: ");
+				quantidade = sc.nextInt();
+				produto++;
+				totalV += (preco * quantidade);
+			} else {
+				System.out.println("A categoria inserida é inválida!");
+			}
+		}
+
+		System.out.printf("O valor total dos produtos de cama, mesa e banho é de R$%.2f\n", totalC);
+		System.out.printf("O valor total dos produtos de eletrodoméstico é de R$%.2f\n", totalE);
+		System.out.printf("O valor total dos produtos de vestuário é de R$%.2f\n", totalV);
+
+		sc.close();
+
+	}
+
+}
